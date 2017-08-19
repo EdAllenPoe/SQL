@@ -1,0 +1,11 @@
+SELECT * FROM users;
+
+INSERT INTO users(users) VALUE ('Eric');
+
+INSERT INTO users(users) VALUE ('Joe Schmoe');
+
+INSERT INTO users(users) VALUE ('Mr Grimm');
+
+DELETE FROM users WHERE ID=2;
+
+UPDATE users SET users='Eric2' WHERE id=3;
