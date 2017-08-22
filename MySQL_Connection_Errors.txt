@@ -1,0 +1,30 @@
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) 
+(2003, "Can't connect to MySQL server on '127.0.0.1' (10061)")
+'host': 'localhost',
+                'database': db, # we got db as an argument
+                'user': 'root',
+                'password': 'root',
+                'port': '1234'        THIS ERROR HAPPENED WHEN THE WRONG PORT WAS SELECTED
+					FIX=SELECT CORRECT PORT
+
+
+
+
+ (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+config = {
+                'host': 'localhost',
+                'database': db, # we got db as an argument
+                'user': 'root',
+                'password': 'WORD',    THIS ERROR HAPPENED WHEN THE WRONG PASSWORD WAS USED
+                'port': '3306'			FIX=CORRECT PASSWORD
+
+
+
+ (_mysql_exceptions.OperationalError) (1049, "Unknown database 'worl'")
+
+mysql = MySQLConnector(app, 'worl')  THIS ERROR HAPPENED WHEN SERVER.PY REFERENCED A NON-EXISTENT DATABASE
+					FIX=SELECT THE CORRECT DATABASE NAME
+
+
+
